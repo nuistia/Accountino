@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Accountino.Application\Accountino.Application.csproj" />
     <ProjectReference Include="..\Accountino.Domain\Accountino.Domain.csproj" />
   </ItemGroup>
 
