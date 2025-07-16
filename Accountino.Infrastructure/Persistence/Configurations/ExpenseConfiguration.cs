@@ -16,6 +16,9 @@ public class ExpenseConfiguration : IEntityTypeConfiguration<Expense>
         builder.Property(e => e.Id)
             .ValueGeneratedOnAdd()
             .HasColumnName("Id");
+        builder.Property(e => e.Date)
+            .HasColumnName("Date")
+            .IsRequired();
         builder.Property(e => e.Price)
             .HasPrecision(2)
             .IsRequired();
