@@ -2,7 +2,6 @@
 using Accountino.Domain.Common;
 using Accountino.Domain.Common.Specification;
 using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
 
 namespace Accountino.Infrastructure.Persistence.Repositories;
 
@@ -35,9 +34,14 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, I
         await Context.SaveChangesAsync();
     }
 
+    public async Task<List<TEntity>> GetAllAsync()
+    {
+        return await _entities.ToListAsync();
+    }
+
     public async Task<TEntity> GetByIdAsync(int id)
     {
-        return await _entities.FindAsync();
+        return await _entities.FindAsync(id);
     }
 
     public async Task<List<TEntity>> GetBySpecification(Specification<TEntity> spec)

@@ -9,6 +9,7 @@ public interface IRepository<TEntity> where TEntity : IEntity
     Task UpdateAsync(TEntity entity);
     Task DeleteAsync(TEntity entity);
 
+    Task<List<TEntity>> GetAllAsync();
     Task<TEntity> GetByIdAsync(int id);
     Task<List<TEntity>> GetBySpecification(Specification<TEntity> spec);
 }
