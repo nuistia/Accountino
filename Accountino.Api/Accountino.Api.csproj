@@ -20,4 +20,10 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Accountino.Application\Accountino.Application.csproj" />
+    <ProjectReference Include="..\Accountino.Domain\Accountino.Domain.csproj" />
+    <ProjectReference Include="..\Accountino.Infrastructure\Accountino.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
