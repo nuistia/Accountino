@@ -10,8 +10,7 @@ public class ExpenseConfiguration : IEntityTypeConfiguration<Expense>
     {
         builder.ToTable("Expenses");
 
-        builder.HasIndex(c => c.Id)
-            .IsUnique();
+        builder.HasKey(c => c.Id);
 
         builder.Property(e => e.Id)
             .ValueGeneratedOnAdd()

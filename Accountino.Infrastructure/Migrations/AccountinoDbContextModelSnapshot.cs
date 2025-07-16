@@ -39,7 +39,7 @@ namespace Accountino.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Id")
+                    b.HasIndex("Name")
                         .IsUnique();
 
                     b.ToTable("Categories", (string)null);
@@ -71,9 +71,6 @@ namespace Accountino.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("Id")
-                        .IsUnique();
 
                     b.ToTable("Expenses", (string)null);
                 });
